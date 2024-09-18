@@ -21,10 +21,10 @@ El proyecto se organiza en las siguientes capas:
 
 ## 🌐 Endpoints de la Web API
 
-- **GET** `/api/entidad`: Obtiene una lista de entidades.
-- **POST** `/api/entidad`: Crea una nueva entidad.
-- **PUT** `/api/entidad/{id}`: Actualiza una entidad existente.
-- **DELETE** `/api/entidad/{id}`: Elimina una entidad específica.
+- **GET** `/api/`: Obtiene una lista de entidades.
+- **POST** `/api/`: Crea una nueva entidad.
+- **PUT** `/api/{id}`: Actualiza una entidad existente.
+- **DELETE** `/api/{id}`: Elimina una entidad específica.
 
 ## 🗄️ Creando la Base de Datos en SQL Server
 
@@ -33,24 +33,119 @@ Para configurar la base de datos, sigue las instrucciones a continuación:
 ### 1️⃣ Creación de la Base de Datos
 
 ```sql
-CREATE DATABASE MiBaseDeDatos;
-GO
+create database DbCrudNet8
+
+go
 ```
-### 2️⃣ Creación de la Tabla de Ejemplo
+### 2️⃣ Creación de la Tablas
 
 ```sql
+create table Departamento(
+IdDepartamento int primary key identity(1,1),
+Nombre varchar(50)
+)
+
+create table Empleado(
+IdEmpleado int primary key identity(1,1),
+NombreCompleto varchar(50),
+IdDepartamento int references Departamento(IdDepartamento),
+Sueldo decimal(10,2),
+FechaContrato date,
+)
 
 ```
-3️⃣ Creación de Procedimientos Almacenados
-📄 Procedimiento para Obtener Todas las Entidades
+### 3️⃣ Creación de Procedimientos Almacenados
+📄 Procedimiento para Insertar una Nuevas Entidades
 
 ```sql
+insert into Departamento (Nombre) values
+('Administracion'),
+('Marketing')
+insert into Empleado (NombreCompleto,IdDepartamento,Sueldo,FechaContrato) 
+values
+('Maria Mendez',1,4500,'2024-01-12')
+--- Pueden generar mas datos, en mi caso con uno me bastó
+```
+📄 Procedimiento para listar los empleados
+
+```sql
+create procedure sp_listaEmpleados
+as
+begin
+	select
+	e.IdEmpleado as ID,
+	e.NombreCompleto as [Nombre Completo],
+	e.Sueldo,
+	convert(char(10),e.FechaContrato,103) as [Fecha Contrato],
+	d.IdDepartamento as [ID Departamento],
+	d.Nombre
+	from Empleado e
+	inner join Departamento d on e.IdDepartamento = d.IdDepartamento
+end
 
 ```
-📄 Procedimiento para Insertar una Nueva Entidad
+📄 Procedimiento para crear un empleado
+```sql
+create procedure sp_crearEmpleado
+(
+	@NombreCompleto varchar(50),
+	@IdDepartamento int,
+	@Sueldo decimal(10,2),
+	@FechaContrato varchar(10) --DD/MM/YY
+)
+as
+begin
+	set dateformat dmy --definimos el formato
+
+	insert into Empleado(
+	NombreCompleto,
+	IdDepartamento,
+	Sueldo,
+	FechaContrato
+	)
+	values(
+	@NombreCompleto,
+	@IdDepartamento,
+	@Sueldo,
+	convert(date,@FechaContrato,103)
+	)
+end
+```
+📄 Procedimiento para editar los empleados
 
 ```sql
+create procedure sp_editarEmpleado
+(
+	@IdEmpleado int,
+	@NombreCompleto varchar(50),
+	@IdDepartamento int,
+	@Sueldo decimal(10,2),
+	@FechaContrato varchar(10) --DD/MM/YY
+)
+as
+begin
+	set dateformat dmy --definimos el formato
 
+	update Empleado
+	set
+	NombreCompleto = @NombreCompleto,
+	IdDepartamento = @IdDepartamento,
+	Sueldo = @Sueldo,
+	FechaContrato = convert(date,@FechaContrato,103)
+	where IdEmpleado = @IdEmpleado
+end
+```
+
+📄 Procedimiento para eliminar los empleados
+```sql
+create procedure sp_eliminarEmpleado
+(
+	@IdEmpleado int
+)
+as
+begin
+	delete from Empleado where IdEmpleado = @IdEmpleado
+end
 ```
 
 ## 🛠️ Tecnologías y Herramientas Utilizadas
