@@ -15,9 +15,11 @@ Este proyecto se enfoca en construir un sistema CRUD (Crear, Leer, Actualizar, E
 
 El proyecto se organiza en las siguientes capas:
 
-1. **Capa de Datos (Data Layer)**: Maneja todas las interacciones con la base de datos utilizando procedimientos almacenados, sentencias SQL, etc.
-2. **Capa de Negocio (Business Layer)**: Contiene la lógica de negocio y se comunica con la capa de datos.
-3. **Capa de Presentación (Presentation Layer)**: En este caso, es la Web API que expone los endpoints CRUD al usuario.
+1. **Capa de Acceso (Acces)**: Maneja la coneccion directa con la base de datos.
+2. **Capa de Modelo (Models)**: Modela las entidades de la base de datos.
+3. **Capa de Datos (Data)**: Maneja todas las interacciones con la base de datos utilizando procedimientos almacenados, sentencias SQL, etc.
+4. **Capa de Negocio (Business)**: Contiene la lógica de negocio y se comunica con la capa de datos.
+5. **Capa de Presentación (WebApi)**: En este caso, es la Web API que expone los endpoints CRUD al usuario.
 
 ## 🌐 Endpoints de la Web API
 
