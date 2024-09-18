@@ -1,0 +1,11 @@
+C:\Users\Jonat\source\repos\SolucionApi\Acces\bin\Debug\net8.0\Acces.deps.json
+C:\Users\Jonat\source\repos\SolucionApi\Acces\bin\Debug\net8.0\Acces.dll
+C:\Users\Jonat\source\repos\SolucionApi\Acces\bin\Debug\net8.0\Acces.pdb
+C:\Users\Jonat\source\repos\SolucionApi\Acces\obj\Debug\net8.0\Acces.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jonat\source\repos\SolucionApi\Acces\obj\Debug\net8.0\Acces.AssemblyInfoInputs.cache
+C:\Users\Jonat\source\repos\SolucionApi\Acces\obj\Debug\net8.0\Acces.AssemblyInfo.cs
+C:\Users\Jonat\source\repos\SolucionApi\Acces\obj\Debug\net8.0\Acces.csproj.CoreCompileInputs.cache
+C:\Users\Jonat\source\repos\SolucionApi\Acces\obj\Debug\net8.0\Acces.dll
+C:\Users\Jonat\source\repos\SolucionApi\Acces\obj\Debug\net8.0\refint\Acces.dll
+C:\Users\Jonat\source\repos\SolucionApi\Acces\obj\Debug\net8.0\Acces.pdb
+C:\Users\Jonat\source\repos\SolucionApi\Acces\obj\Debug\net8.0\ref\Acces.dll

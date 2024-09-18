@@ -1,0 +1,17 @@
+C:\Users\Jonat\source\repos\SolucionApi\Data\bin\Debug\net8.0\Data.deps.json
+C:\Users\Jonat\source\repos\SolucionApi\Data\bin\Debug\net8.0\Data.dll
+C:\Users\Jonat\source\repos\SolucionApi\Data\bin\Debug\net8.0\Data.pdb
+C:\Users\Jonat\source\repos\SolucionApi\Data\bin\Debug\net8.0\Models.dll
+C:\Users\Jonat\source\repos\SolucionApi\Data\bin\Debug\net8.0\Models.pdb
+C:\Users\Jonat\source\repos\SolucionApi\Data\obj\Debug\net8.0\Data.csproj.AssemblyReference.cache
+C:\Users\Jonat\source\repos\SolucionApi\Data\obj\Debug\net8.0\Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jonat\source\repos\SolucionApi\Data\obj\Debug\net8.0\Data.AssemblyInfoInputs.cache
+C:\Users\Jonat\source\repos\SolucionApi\Data\obj\Debug\net8.0\Data.AssemblyInfo.cs
+C:\Users\Jonat\source\repos\SolucionApi\Data\obj\Debug\net8.0\Data.csproj.CoreCompileInputs.cache
+C:\Users\Jonat\source\repos\SolucionApi\Data\obj\Debug\net8.0\Data.csproj.Up2Date
+C:\Users\Jonat\source\repos\SolucionApi\Data\obj\Debug\net8.0\Data.dll
+C:\Users\Jonat\source\repos\SolucionApi\Data\obj\Debug\net8.0\refint\Data.dll
+C:\Users\Jonat\source\repos\SolucionApi\Data\obj\Debug\net8.0\Data.pdb
+C:\Users\Jonat\source\repos\SolucionApi\Data\obj\Debug\net8.0\ref\Data.dll
+C:\Users\Jonat\source\repos\SolucionApi\Data\bin\Debug\net8.0\Acces.dll
+C:\Users\Jonat\source\repos\SolucionApi\Data\bin\Debug\net8.0\Acces.pdb
